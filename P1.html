@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Calculator</title>
+        <link  rel="stylesheet" href="TS-20-Touil-Abdelhalim.css"/>
+            <script>
+                function ajouter(caractere) {
+                    document.form.aff.value = document.form.aff.value + caractere
+                }
+                function egale() {
+                    var i = document.form.aff.value
+                    if (i) {
+                        document.form.aff.value = eval(i)
+                    }
+                }
+                function effacer() {
+                    document.form.aff.value = + '0';
+                }
+                function retour() {
+                    var i = document.form.aff.value;
+                    document.form.aff.value = i.substr(0, i.length - 1);
+                }
+            </script>
+    </head>
+    <body style="text-align:center;">    
+        <form name="form">    
+            <table border="1"> 
+                <caption>Calculatrice</caption>
+                <thead>
+                <tr>
+                    <td colspan="3">
+                            <input id="screen" name="aff" size="40" maxlength="30" >
+                    </td>
+                </tr>
+                </thead>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="7" onclick="ajouter(7)" /></td>
+                    <td><input id="Button" type="button" value="8" onclick="ajouter(8)" /></td>
+                    <td><input id="Button" type="button" value="9" onclick="ajouter(9)" /></td>
+                </tr>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="4" onclick="ajouter(4)" /></td>
+                    <td><input id="Button" type="button" value="5" onclick="ajouter(5)" /></td>
+                    <td><input id="Button" type="button" value="6" onclick="ajouter(6)" /></td>
+                </tr>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="1" onclick="ajouter(1)" /></td>
+                    <td><input id="Button" type="button" value="2" onclick="ajouter(2)" /></td>
+                    <td><input id="Button" type="button" value="3" onclick="ajouter(3)" /></td>
+                </tr>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="(" onclick="ajouter('(')" /></td>
+                    <td><input id="Button" type="button" value="0" onclick="ajouter(0)" /></td>
+                    <td><input id="Button" type="button" value=")" onclick="ajouter(')')" /></td>
+                </tr>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="-" onclick="ajouter('-')" /></td>
+                    <td><input id="Button" type="button" value="/" onclick="ajouter('/')" /></td>
+                    <td><input id="Button" type="button" value="*" onclick="ajouter('*')" /></td>
+                </tr>
+                <tr class="maint">
+                    <td><input id="Button" type="button" value="+" onclick="ajouter('+')" /></td>
+                    <td>
+                        <input id="Button" type="button" value="<-X" onclick="retour()" />
+                        <input id="Button" type="button" value="CE" onclick="effacer()" />
+                    </td>
+                    <td><input id="Button=" type="button" value="=" onclick="egale()" /></td>
+                </tr>
+                </form>
+            </table>
+        </div>  
+    </body>
+</html>
